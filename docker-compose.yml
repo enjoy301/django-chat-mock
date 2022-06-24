@@ -1,0 +1,12 @@
+version: '3'
+services:
+    backend:
+        image: eunjong147/backend-chat-mock:1.0.0
+        ports:
+            - "8000:8000"
+        depends_on:
+            - redis
+    redis:
+        image: redis:5
+        ports:
+            - "6379:6379"
